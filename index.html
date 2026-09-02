@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Apex Lite — Splash + Trailer Player</title>
+    <style>
+      :root { color-scheme: dark; }
+      body {
+        margin: 0;
+        font: 14px/1.5 system-ui, sans-serif;
+        background: #0b0b0f;
+        color: #e8e8ea;
+        padding: 24px;
+      }
+      h1 { font-size: 18px; margin: 0 0 4px; }
+      p.sub { margin: 0 0 20px; color: #9a9aa2; }
+      /* The container MUST exist in the DOM and be sized before the player builds. */
+      #apex-player {
+        width: 100%;
+        max-width: 960px;
+        aspect-ratio: 16 / 9;
+        background: #000;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      #controls { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 8px; }
+      button {
+        background: #1d1d24; color: #e8e8ea; border: 1px solid #33333d;
+        border-radius: 6px; padding: 8px 14px; cursor: pointer; font: inherit;
+      }
+      button:hover { background: #262630; }
+      #status { color: #9a9aa2; font-family: ui-monospace, monospace; min-height: 1.5em; }
+    </style>
+  </head>
+  <body>
+    <h1>Apex Lite — Splash + Trailer Player</h1>
+    <p class="sub">
+      Native MP4 splash trailers via <code>@apex/default-playback</code>; HLS/DASH
+      trailers via <code>@apex/shaka-playback</code>. Two engines, zero plugins.
+    </p>
+
+    <div id="apex-player"></div>
+
+    <div id="controls">
+      <button id="mute">Unmute</button>
+    </div>
+    <div id="status">Loading…</div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "apex-lite-trailer-example",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Minimal Apex JS Player integration: native MP4 splash videos + HLS/DASH trailers",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@apex/core": "^0.16.0",
+    "@apex/devices": "^0.16.0",
+    "@apex/default-playback": "^0.16.0",
+    "@apex/shaka-playback": "^0.16.0",
+    "rxjs": "^7.8.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4",
+    "vite": "^5.4.0"
+  }
+}
